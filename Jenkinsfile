@@ -12,8 +12,8 @@ pipeline {
         
             steps {
                 echo 'Cloning...'
-                echo "credi: ${githubCredintials}"
-                sh "${githubCredintials}"
+                echo "credi: ${githubCredintials}  ${githubCredintials_USR}"
+                sh "${githubCredintials_USR}"
 
                 git 'https://github.com/mohannedsa/jenkinsPipeline.git'
             }
