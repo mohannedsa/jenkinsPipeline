@@ -10,12 +10,15 @@ pipeline {
         
          stage('Clone sources') {
             git 'https://github.com/mohannedsa/jenkinsPipeline.git'
-            }
+        
+        }
+
+
         stage('build') {
             steps {
                 echo 'Hello World'
                 
-                echo "Credintals ${githubCredintials}"
+                
                 //sh "${githubCredintials}"
             }
         }
