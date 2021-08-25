@@ -7,13 +7,16 @@ pipeline {
     }
     //stages will go under
     stages {
+        
+         stage('Clone sources') {
+            git 'https://github.com/mohannedsa/jenkinsPipeline.git'
+            }
         stage('build') {
             steps {
                 echo 'Hello World'
-                 // Get some code from a GitHub repository
-                git 'https://github.com/mohannedsa/jenkinsPipeline.git'
+                
                 echo "Credintals ${githubCredintials}"
-                sh "${githubCredintials}"
+                //sh "${githubCredintials}"
             }
         }
     }
