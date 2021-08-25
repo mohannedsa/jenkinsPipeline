@@ -7,15 +7,10 @@ pipeline {
     }
     //stages will go under
     stages {
-        
-         stage('Clone sources') {
-            git 'https://github.com/mohannedsa/jenkinsPipeline.git'
-        
-        }
-
-
         stage('build') {
             steps {
+                git 'https://github.com/mohannedsa/jenkinsPipeline.git'
+
                 echo 'Hello World'
                 
                 
