@@ -11,7 +11,7 @@ pipeline {
         
             steps {
                 echo "credi: ${githubCredintials_PSW}  ${githubCredintials_USR}"
-             
+            
             }
         }   
             
