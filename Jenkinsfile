@@ -20,8 +20,7 @@ pipeline {
             steps {
                 
                 echo 'Cloning...'
-                sh('curl -u $githubCredintials_USR:$githubCredintials_PSW git "https://github.com/mohannedsa/jenkinsPipeline.git"')
-
+                git branch: "master", url: "https://github.com/mohannedsa/jenkinsPipeline.git" 
             }
         }  
     }
