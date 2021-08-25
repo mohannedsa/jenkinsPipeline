@@ -20,7 +20,7 @@ pipeline {
             steps {
                 
                 echo 'Cloning...'
-                git branch: "refs/remotes/origin/master", url: "https://github.com/mohannedsa/jenkinsPipeline.git" 
+                git url: "https://github.com/mohannedsa/jenkinsPipeline.git" 
             }
         }  
     }
