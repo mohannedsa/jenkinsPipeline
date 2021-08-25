@@ -1,7 +1,6 @@
 pipeline {
     agent any
     //global declaration
-
     environment{
         githubCredintials = Credentials('cec5d559-77d3-4da6-856c-a69d5ebc5ca0')
     }
