@@ -11,10 +11,9 @@ pipeline {
         stage("build") {
         
             steps {
+                echo "credi: ${githubCredintials_PSW}  ${githubCredintials_USR}"
+                
                 echo 'Cloning...'
-                echo "credi: ${githubCredintials}  ${githubCredintials_USR}"
-                sh "${githubCredintials_USR}"
-
                 git 'https://github.com/mohannedsa/jenkinsPipeline.git'
             }
         }
