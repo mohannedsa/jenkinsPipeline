@@ -1,19 +1,32 @@
 pipeline {
     agent any
-    //global declaration
 
-    environment{
-        githubCredintials = Credintals('cec5d559-77d3-4da6-856c-a69d5ebc5ca0')
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "M3"
     }
-    //stages will go under
+
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
-                 // Get some code from a GitHub repository
+                // Get some code from a GitHub repository
                 git 'https://github.com/mohannedsa/jenkinsPipeline.git'
-                echo "Credintals ${githubCredintials}"
-                sh "${githubCredintials}"
+
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
+
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
+        }
     }
 }
