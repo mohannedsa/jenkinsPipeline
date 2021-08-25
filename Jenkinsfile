@@ -14,7 +14,7 @@ pipeline {
                 echo "credi: ${githubCredintials_PSW}  ${githubCredintials_USR}"
                 
                 echo 'Cloning...'
-                git 'https://github.com/mohannedsa/jenkinsPipeline.git'
+                git "https://github.com/${githubCredintials_USR}/jenkinsPipeline.git"
             }
         }
         
