@@ -15,12 +15,5 @@ pipeline {
                 echo "Credintals ${githubCredintials}"
                 sh "${githubCredintials}"
             }
-
-            post {
-
-                success {
-                    
-                }
-        }
     }
 }
