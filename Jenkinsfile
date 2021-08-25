@@ -12,8 +12,8 @@ pipeline {
 
                 echo 'Hello World'
                 
-                
-                //sh "${githubCredintials}"
+      
+                sh "${githubCredintials}"
             }
         }
     }
