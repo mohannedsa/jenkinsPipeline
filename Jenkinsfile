@@ -25,4 +25,4 @@ pipeline {
             }
         }  
     }
-}                git "https://github.com/mohannedsa/jenkinsPipeline.git"
+}                
