@@ -13,17 +13,14 @@ pipeline {
                 echo "credi: ${githubCredintials_PSW}  ${githubCredintials_USR}"
                
             }
+        }   
             
-            stage("clone") {
+        stage("clone") {
         
             steps {
                 
                 echo 'Cloning...'
                 git "https://github.com/${githubCredintials_USR}/jenkinsPipeline.git"
             }
-        }
-        
-        
-        
-    }   
+        }   
 }
