@@ -20,8 +20,9 @@ pipeline {
             steps {
                 
                 echo 'Cloning...'
-                git "https://github.com/${githubCredintials_USR}/jenkinsPipeline.git"
+                sh('curl -u $githubCredintials_USR:$githubCredintials_PSW git "https://github.com/mohannedsa/jenkinsPipeline.git"')
+
             }
         }  
     }
-}
+}                git "https://github.com/mohannedsa/jenkinsPipeline.git"
