@@ -20,7 +20,7 @@ pipeline {
             steps {
                 
                 echo 'Cloning...'
-                git url: "https://github.com/mohannedsa/jenkinsPipeline.git, branch:master" 
+                git url: "https://github.com/mohannedsa/jenkinsPipeline.git" 
             }
         }  
     }
