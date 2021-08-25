@@ -22,5 +22,6 @@ pipeline {
                 echo 'Cloning...'
                 git "https://github.com/${githubCredintials_USR}/jenkinsPipeline.git"
             }
-        }   
+        }  
+    }
 }
