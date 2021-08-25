@@ -15,5 +15,6 @@ pipeline {
                 echo "Credintals ${githubCredintials}"
                 sh "${githubCredintials}"
             }
+        }
     }
 }
